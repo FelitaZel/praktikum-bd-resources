@@ -1,1 +1,2 @@
-This repository is used to host resources for a database course for PCU.
+
+[03_bd-sql-tester-template](03_bd-sql-tester-template)

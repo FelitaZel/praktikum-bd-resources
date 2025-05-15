@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.3" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bdsqltester.scenes.user.UserViewController">
+    <items>
+        <VBox>
+            <children>
+                <Label text="Daftar Tugas:" />
+                <ListView fx:id="assignmentList" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+        <VBox>
+            <children>
+                <Label text="Detail Tugas:" />
+                <TextField fx:id="idField" editable="false" promptText="ID" />
+                <TextField fx:id="nameField" editable="false" promptText="Nama Tugas" />
+                <Label text="Instruksi:" />
+                <TextArea fx:id="instructionsField" editable="false" prefHeight="100.0" prefWidth="200.0" />
+                <Label text="Jawaban Anda (SQL):" />
+                <TextArea fx:id="answerField" prefHeight="100.0" prefWidth="200.0" />
+                <Button onAction="#onTestClick" text="Test Jawaban" />
+                <Label text="Hasil Test:" />
+                <TextArea fx:id="queryResultArea" editable="false" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                <Button onAction="#onSubmitClick" text="Submit Jawaban" />
+                <Label fx:id="gradeLabel" text="Nilai:" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </items>
+</SplitPane>
